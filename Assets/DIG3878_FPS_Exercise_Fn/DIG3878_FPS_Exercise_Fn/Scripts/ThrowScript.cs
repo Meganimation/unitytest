@@ -10,6 +10,7 @@ public class ThrowScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if( Input.GetButtonDown("Fire1") ) {
+			Debug.Log("hey");
 			Camera cam = Camera.main;
             GameObject thebullet = (GameObject)Instantiate(rock_Prefab, cam.transform.position + cam.transform.forward, cam.transform.rotation); //throw the rock to the forward direction
             thebullet.GetComponent<Rigidbody>().AddForce( cam.transform.forward * rockSpeed, ForceMode.Impulse); //adding force to our rock
